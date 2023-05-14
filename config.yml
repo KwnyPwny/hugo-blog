@@ -2,7 +2,7 @@ baseURL: https://kpwn.de/
 languageCode: en-us
 title: kpwn.de
 paginate: 8
-theme: PaperMod
+theme: hugo-PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
