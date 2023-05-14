@@ -1,0 +1,7 @@
+<div class="social-icons" style="padding: 0px">
+    {{- range . }}
+    <a href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me" title="{{ .name | title }}" style="border-bottom: none;">
+        {{ partial "svg.html" . }}
+    </a>
+    {{- end }}
+</div>

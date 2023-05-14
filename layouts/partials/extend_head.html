@@ -1,0 +1,23 @@
+{{- /* Head custom content area start */ -}}
+{{- /* Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
+{{- /* Can be overwritten by partial with the same name in the global layouts. */ -}}
+
+{{- /* MathJax */}}
+<script>
+	MathJax = {
+		tex: {
+		  inlineMath: [['$','$']],
+		  displayMath: [['$$','$$']],
+		  processEscapes: true,
+		  processEnvironments: true
+		},
+		options: {
+		  skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		}
+	};
+</script>
+{{- /* This is a trick to include custom JS into the assets folder when published. */ -}}
+{{- $mathJaxJS := slice (resources.Get "js/tex-mml-svg.js") | resources.Concat "assets/js/custom.js" | fingerprint }}
+<script type="text/javascript" id="MathJax-script" async src="{{ $mathJaxJS.RelPermalink }}" integrity="{{ $mathJaxJS.Data.Integrity }}"></script>
+
+{{- /* Head custom content area end */ -}}

@@ -1,0 +1,41 @@
+.post-content div.table-div {
+  display: flex;
+  justify-content: center;
+}
+
+.post-content table {
+  width: initial;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow-x: auto;
+  word-break: keep-all;
+}
+
+.post-content table th {
+  font-size: 18px;
+  text-align: start;
+  background-color: var(--code-bg);
+}
+
+.post-content table.table-striped tr:nth-child(even) {
+  background-color: var(--code-bg);
+}
+
+.post-content table.table-bordered {
+  border: 1px solid var(--border);
+  border-bottom: none;
+}
+
+/* Quote Style
+> Quote
+>
+> Author
+Idea from here https://discourse.gohugo.io/t/generating-the-author-of-a-quote-blockquote/19200
+but changed a lot */
+
+blockquote p {
+  display: inline;
+}
+blockquote p:last-of-type {
+  font-style: italic;
+}

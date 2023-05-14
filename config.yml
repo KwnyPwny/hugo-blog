@@ -1,0 +1,93 @@
+baseURL: https://kpwn.de/
+languageCode: en-us
+title: kpwn.de
+paginate: 8
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+assetsDir: assets
+
+minify:
+    disableXML: true
+    minifyOutput: false
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+permalinks:
+    posts: /:year/:month/:title/
+
+params:
+    author: Konstantin
+    description: "My notebook on technical stuff, IT security, cryptography and anything else I am interested in."
+    defaultTheme: auto # dark, light
+    env: production # This allows search engines to index
+
+    # the following settings can be also configured per Post in the FrontMatter
+    showShareButtons: false
+    showReadingTime: true
+    showPostNavLinks: false
+    showBreadCrumbs: false
+    showCodeCopyButtons: true
+    showToc: true
+    tocOpen: false
+    disableScrollToTop: false
+    hidemeta: false
+    hidesummary: false
+
+    homeInfoParams:
+        Title: "Posts"
+
+    socialIcons:
+        - name: email
+          url: "mailto:your@email.com"
+        - name: mastodon
+          url: https://infosec.exchange/@kpwn
+        - name: twitter
+          url: "https://twitter.com/kwnypwny"
+        - name: github
+          url: "https://github.com/KwnyPwny"
+        - name: RSS
+          url: "/posts/index.xml"
+
+    label:
+        text: "~/kpwn$ _"
+
+    assets:
+          disableHLJS: true
+
+    fuseOpts:
+        ignoreLocation: true
+        threshold: 0.2
+        keys: ["title", "permalink", "summary", "content"]
+
+taxonomies:
+    category: "" # "" disables the taxonomy
+    tag: ""
+#    series: series
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        # anchorLineNos: true # This means that line numbers can be clicked and link to themselves
+        codeFences: true
+        guessSyntax: false # This is a fallback if no language was specified
+        lineNos: false
+        noClasses: true
+        style: monokai
+
+menu:
+    main:
+        - identifier: search
+          name: Search
+          url: /search
