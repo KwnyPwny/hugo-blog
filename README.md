@@ -12,7 +12,7 @@ git clone git@github.com:KwnyPwny/hugo-blog.git
 2. Clone PaperMod:
 ```
 cd themes
-git clone https://github.com/adityatelange/hugo-PaperMod
+git clone git@github.com:adityatelange/hugo-PaperMod.git
 ```
 
 3. Clone MathJax:
