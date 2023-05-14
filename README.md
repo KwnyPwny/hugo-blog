@@ -7,6 +7,7 @@ In my blog post [How to Set Up This Blog](https://kpwn.de/2021/09/how-to-set-up-
 1. Clone this repository:
 ```
 git clone git@github.com:KwnyPwny/hugo-blog.git
+cd hugo-blog
 ```
 
 2. Clone PaperMod:
